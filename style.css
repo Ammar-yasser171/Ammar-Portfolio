@@ -24,6 +24,20 @@ ul{
 a{
     text-decoration: none;
 }
+.text-primary{
+    color: var(--secondary-color);
+}
+.btn-primary{
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover{
+    background-color: #15A706;
+}
 header{
     background-color: var(--bg-color);
     height: 100vh;
@@ -33,7 +47,6 @@ header .navbar{
     border-bottom:1px solid #ccc ;
     position: fixed;
     width: 100%;
-    padding: 1rem 2rem;
 }
 header .navbar nav{
     display: flex;
@@ -41,6 +54,7 @@ header .navbar nav{
     align-items: center;
     max-width: 1100px;
     margin: auto;
+    padding: 1rem 2rem;
 }
 header .navbar nav ul{
     display: flex;
@@ -66,6 +80,64 @@ header .header-content{
     height: 100%;
     align-items: center;
 }
+header .header-content .content-text{
+    margin-bottom: 5rem;
+}
+
+header .header-content p span{
+    font-weight: 700;
+    font-size: 20px;
+}
+header .header-content h1{
+    font-size: 60px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 10px 0;
+}
+header .header-content .title{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-weight: 500;
+}
+header .header-content .social{
+    margin: 1rem 0 2rem;
+}
+header .header-content .social a {
+    padding: 10px;
+    font-size: 18px;
+    background-color: var(--third-color);
+    color: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+header .header-content .social a:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
 header .header-content img{
     max-width: 450px;
+    position: relative;
+    z-index: 2;
+    clip-path: ellipse(50% 60% at 50% 40%);
+    transition: 0.3s ease-in-out;
+}
+header .header-content img:hover {
+  transform: scale(1.03);
+}
+
+header .header-content div:last-child::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  top: 56%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.2;
 }
