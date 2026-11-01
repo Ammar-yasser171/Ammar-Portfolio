@@ -142,22 +142,25 @@ header .header-content div:last-child::before {
   z-index: 1;
   opacity: 0.2;
 }
-
-#about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
 }
-#about h1{
-    font-size: 32px;
-    font-weight: 700;
+#about,#skills{
+    padding: 6rem 0;
+}
+#about h1,
+#skills h2{
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 1px;
     color: var(--primary-color);
     position: relative;
-    display: inline-block;
 }
-#about h1::after{
+#about h1::after,
+#skills h2::after{
   content: "";
   position: absolute;
   left: 50%;
@@ -169,18 +172,56 @@ header .header-content div:last-child::before {
   border-radius: 2px;
 }
 #about .about-content{
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    gap: 100px;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
 }
 #about .about-content .pref-section h3{
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 28px;
     color: var(--primary-color);
+    margin-bottom: 20px;
 
 }
-#about .about-content .pref-section h3 span{
-    color: var(--secondary-color);
+#about .about-content .pref-section p{
+    color: var(--third-color);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+#about .about-content .info-section p{
+    color: var(--third-color);
+    margin-bottom: 20px;
+}
+#skills {
+    background-color: var(--primary-color);
+}
+#skills h2{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+#skills .skills-content{
+    margin-top: 2rem;
+    background-color:#0f272d;
+}
+#skills .skills-content .row{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+}
+#skills .skills-content .row .item{
+    color: #fff;
+    background-color:#000;
+    margin: 20px;
+    padding : 1rem;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+#skills .skills-content .row .item:hover{
+    box-shadow: 10px 10px 10px #00f4ab0c;
+}
+#skills .row img{
+    max-width: 40px;
 }
