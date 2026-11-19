@@ -149,12 +149,13 @@ header .header-content .social a:hover {
     margin: auto;
     padding: 0 2rem;
 }
-#about,#skills,#services{
+#about,#skills,#services,#portfolio{
     padding: 6rem 0;
 }
 #about h1,
 #skills h2,
-#services h2{
+#services h2,
+#portfolio h2{
     text-align: center;
     font-size: 38px;
     font-weight: 600;
@@ -199,7 +200,8 @@ header .header-content .social a:hover {
 #skills {
     background-color: var(--primary-color);
 }
-#skills h2{
+#skills h2,
+#portfolio h2{
     color: #fff;
     font-family: 'Poppins', sans-serif;
 }
@@ -269,4 +271,46 @@ header .header-content .social a:hover {
 }
 #services .row .item img{
     width: 50px;
+}
+#portfolio{
+    background-color: var(--primary-color);
+}
+
+#portfolio .row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#portfolio .row .item{
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+#portfolio .row .item:hover{
+    transform: translateY(-10px);
+}
+
+#portfolio .row .item img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+#portfolio .row .item .item-content{
+    padding: 10px;
+}
+
+#portfolio .row .item .item-content h3{
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#portfolio .row .item .item-content a{
+    color: var(--secondary-color);
+    font-weight: 600;
 }
