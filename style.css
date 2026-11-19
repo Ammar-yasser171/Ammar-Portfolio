@@ -8,6 +8,9 @@
     --bg-color:#ecf0f3;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -35,6 +38,8 @@ a{
     padding: 8px 20px;
     font-size: 14px;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 .btn-primary:hover{
@@ -157,7 +162,8 @@ header .header-content .social a:hover {
 #about h1,
 #skills h2,
 #services h2,
-#portfolio h2{
+#portfolio h2,
+#contact h2{
     text-align: center;
     font-size: 38px;
     font-weight: 600;
@@ -234,7 +240,7 @@ header .header-content .social a:hover {
     max-width: 40px;
 }
 
-#services{
+#services, #contact{
     background-color: #00f4ab0c;
 }
 #services .heading{
@@ -300,6 +306,7 @@ header .header-content .social a:hover {
 
 #portfolio .row .item img{
     width: 100%;
+    border-bottom: 2px solid #ccc;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -309,7 +316,7 @@ header .header-content .social a:hover {
 }
 
 #portfolio .row .item .item-content h3{
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
@@ -318,4 +325,33 @@ header .header-content .social a:hover {
     color: var(--secondary-color);
     font-weight: 500;
     font-size: 14px;
+}
+
+#contact{
+    padding: 4rem 0;
+}
+#contact .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    margin-top: 4rem;
+    background-color: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
+#contact .row input, #contact .row textarea{
+    display: block;
+    width: 100%;
+    margin : 20px 0;
+    padding: 10px;
+    outline: none;
+    background-color : #00f4ab0c;
+    border: 1px solid #bbb;
+}
+#footer{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
 }
