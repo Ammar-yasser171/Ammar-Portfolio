@@ -118,29 +118,31 @@ header .header-content .social a:hover {
   transform: scale(1.1);
 }
 
-header .header-content img{
-    max-width: 450px;
+.image-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container::before{
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.image-container img{
     position: relative;
     z-index: 2;
     clip-path: ellipse(50% 60% at 50% 40%);
-    transition: 0.3s ease-in-out;
-}
-header .header-content img:hover {
-  transform: scale(1.03);
-}
-
-header .header-content div:last-child::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background-color: var(--secondary-color);
-  border-radius: 50%;
-  top: 56%;
-  left: 64%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.2;
+    width: 100%;
+    max-width: 330px;
+    transform: translateY(-20px);
 }
 .container{
     max-width: 1100px;
@@ -161,7 +163,8 @@ header .header-content div:last-child::before {
     position: relative;
 }
 #about h1::after,
-#skills h2::after{
+#skills h2::after,
+#portfolio h2::after{
   content: "";
   position: absolute;
   left: 50%;
